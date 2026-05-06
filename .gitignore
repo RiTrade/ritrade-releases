@@ -1,0 +1,23 @@
+# Wall 2 — release/ inner repo whitelist (Security W1 Finding 1).
+#
+# Default-deny. Only the listed paths can be `git add`-ed without -f.
+# This wall is symmetric with Wall 3 (.github/workflows/no-source.yml)
+# so any new file shape is rejected at both gates by default.
+#
+# To allow a new artefact shape: add it here AND in no-source.yml's allowlist
+# in the same commit, with a one-line spec note explaining why.
+
+*
+.*
+
+!.gitignore
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
+!setup-*.exe
+!*.sha256
+!update-manifest.json
+!README.md
+!CHANGELOG.md
+!LICENSE
+!release-notes-v*.md
