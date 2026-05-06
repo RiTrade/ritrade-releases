@@ -1,0 +1,99 @@
+# Wall 3 — server-side guard for ritrade-releases.
+#
+# Rejects any push or PR whose tree contains a file outside the allowlist,
+# or any single file larger than 100 MB. Runs on GitHub's infrastructure
+# so a compromised dev machine can't bypass it.
+#
+# Allowlist is intentionally symmetric with Wall 2 (release/.gitignore).
+# Adding a new file shape requires updating BOTH files in the same commit.
+#
+# Branch protection on `main` (set once via gh, see release/SETUP.md):
+#   - force-push: disabled
+#   - required status check: this workflow ("validate") must pass
+#   - required: pull request reviews not required (single-operator model)
+#
+# Third-party action pins:
+#   actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+name: no-source-guard
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+      - name: Validate path allowlist + size cap
+        env:
+          MAX_BYTES: 104857600  # 100 MB hard cap (per spec §1 Wall 3)
+        run: |
+          set -euo pipefail
+
+          # Allowlisted path patterns. Glob-style; matched against each tree path.
+          # Symmetric with release/.gitignore Wall 2 whitelist.
+          allow=(
+            '.gitignore'
+            '.github/workflows/*.yml'
+            'setup-*.exe'
+            '*.sha256'
+            'update-manifest.json'
+            'README.md'
+            'CHANGELOG.md'
+            'LICENSE'
+            'release-notes-v*.md'
+          )
+
+          matches_allowlist() {
+            local path="$1"
+            for pattern in "${allow[@]}"; do
+              # shellcheck disable=SC2053
+              [[ "$path" == $pattern ]] && return 0
+            done
+            return 1
+          }
+
+          violations=0
+          oversize=0
+
+          # Walk the entire HEAD tree (defence-in-depth: any committed file
+          # must satisfy the allowlist, not just diff vs base).
+          while IFS=$'\t' read -r meta path; do
+            # meta = "<mode> <type> <sha> <size>"; size is field 4
+            size=$(echo "$meta" | awk '{print $4}')
+
+            if ! matches_allowlist "$path"; then
+              echo "::error file=$path::path '$path' is not in Wall 3 allowlist"
+              violations=$((violations + 1))
+              continue
+            fi
+
+            if [[ "$size" =~ ^[0-9]+$ ]] && [[ "$size" -gt "$MAX_BYTES" ]]; then
+              echo "::error file=$path::file '$path' is $size bytes (>${MAX_BYTES} byte cap)"
+              oversize=$((oversize + 1))
+            fi
+          done < <(git ls-tree -rl HEAD)
+
+          echo
+          echo "Allowlist violations: $violations"
+          echo "Oversize files:       $oversize"
+
+          if [[ $violations -gt 0 || $oversize -gt 0 ]]; then
+            echo
+            echo "Wall 3 REJECTED this commit."
+            echo "If a new file shape is intentional, update BOTH this workflow's"
+            echo "allowlist AND release/.gitignore in the same commit."
+            exit 1
+          fi
+
+          echo "Wall 3 OK."
