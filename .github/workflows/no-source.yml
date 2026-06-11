@@ -51,6 +51,7 @@ jobs:
             'README.md'
             'CHANGELOG.md'
             'LICENSE'
+            'EULA.md'
             'release-notes-v*.md'
           )
 
