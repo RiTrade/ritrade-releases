@@ -20,4 +20,7 @@
 !README.md
 !CHANGELOG.md
 !LICENSE
+# EULA ships with every release since the 1.1.0 license swap (work 0139 era);
+# allowed here AND in no-source.yml per the walls' symmetry rule.
+!EULA.md
 !release-notes-v*.md
