@@ -46,6 +46,7 @@ jobs:
             '.gitignore'
             '.github/workflows/*.yml'
             'setup-*.exe'
+            'RiTrade-setup-*.exe'
             '*.sha256'
             'update-manifest.json'
             'README.md'
