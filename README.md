@@ -1,6 +1,6 @@
 # RiTrade Releases
 
-Public download channel for [RiTrade](https://github.com/RiTrade/ritrade-code) - a local trading journal that ingests broker reports (XLS, PDF, REST) and renders customizable dashboards.
+Public download channel for [RiTrade](https://www.ritrade.app) - a local trading journal that ingests broker reports (XLS, PDF, REST) and renders customizable dashboards.
 
 ## Latest
 
@@ -9,7 +9,7 @@ Public download channel for [RiTrade](https://github.com/RiTrade/ritrade-code) -
 - Download: [RiTrade-setup-1.2.2.exe](https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.2/RiTrade-setup-1.2.2.exe) (68.4 MB)
 - SHA256: [RiTrade-setup-1.2.2.exe.sha256](https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.2/RiTrade-setup-1.2.2.exe.sha256)
 
-After installing, RiTrade runs locally on `http://localhost:5000`. No accounts, no cloud, no telemetry.
+After installing, RiTrade runs locally. No accounts, no cloud, no telemetry.
 
 ## Verify the download
 
