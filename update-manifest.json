@@ -1,11 +1,11 @@
 {
-    "schema_version":  1,
-    "version":  "1.2.24",
-    "sha256":  "55db8b27b6dd99e3522464ad2b29da79c9c060fed0784fe7d80458a154fec513",
-    "download_url":  "https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.24/RiTrade-setup-1.2.24.exe",
-    "published_at":  "2026-07-15T08:51:46Z",
-    "release_notes_url":  "https://github.com/RiTrade/ritrade-releases/releases/tag/v1.2.24",
-    "min_supported_from_version":  null,
-    "signature":  null,
-    "manifest_url_v2":  null
+  "schema_version": 1,
+  "version": "1.2.31",
+  "sha256": "60d2614b0cdee2fb1140d4672ce16fc63bfaf725209f83db3b70f4be510abe69",
+  "download_url": "https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.31/RiTrade-setup-1.2.31.exe",
+  "published_at": "2026-07-16T18:00:10Z",
+  "release_notes_url": "https://github.com/RiTrade/ritrade-releases/releases/tag/v1.2.31",
+  "min_supported_from_version": null,
+  "signature": null,
+  "manifest_url_v2": null
 }
