@@ -4,18 +4,18 @@ Public download channel for [RiTrade](https://www.ritrade.app) - a local trading
 
 ## Latest
 
-**[v1.2.35](https://github.com/RiTrade/ritrade-releases/releases/tag/v1.2.35)** - released 2026-07-21.
+**[v1.2.36](https://github.com/RiTrade/ritrade-releases/releases/tag/v1.2.36)** - released 2026-07-22.
 
-- Download: [RiTrade-setup-1.2.35.exe](https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.35/RiTrade-setup-1.2.35.exe) (79.7 MB)
-- SHA256: [RiTrade-setup-1.2.35.exe.sha256](https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.35/RiTrade-setup-1.2.35.exe.sha256)
+- Download: [RiTrade-setup-1.2.36.exe](https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.36/RiTrade-setup-1.2.36.exe) (79.7 MB)
+- SHA256: [RiTrade-setup-1.2.36.exe.sha256](https://github.com/RiTrade/ritrade-releases/releases/download/v1.2.36/RiTrade-setup-1.2.36.exe.sha256)
 
 After installing, RiTrade runs locally. No accounts, no cloud, no telemetry.
 
 ## Verify the download
 
-        Get-FileHash RiTrade-setup-1.2.35.exe -Algorithm SHA256
+        Get-FileHash RiTrade-setup-1.2.36.exe -Algorithm SHA256
 
-Compare with the value in `RiTrade-setup-1.2.35.exe.sha256`. If they don't match, do not install - re-download from the link above.
+Compare with the value in `RiTrade-setup-1.2.36.exe.sha256`. If they don't match, do not install - re-download from the link above.
 
 ## All releases
 
