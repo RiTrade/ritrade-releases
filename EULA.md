@@ -50,11 +50,11 @@ Obtaining the Software from any source other than Licensor's official distributi
 
 ## 4. No Financial, Investment, Tax, or Legal Advice
 
-4.1 **The Software is a record-keeping and analysis tool only.** It is provided for informational and educational purposes. Nothing in the Software or the Online Services — including any Derived Output, statistic, chart, dashboard, metric, signal, or visualization — constitutes financial, investment, trading, tax, accounting, or legal advice, or a recommendation, solicitation, or offer to buy or sell any security, derivative, currency, digital asset, or other financial instrument.
+4.1 **The Software is a record-keeping and analysis tool only.** It is provided for informational and educational purposes. Nothing in the Software or the Online Services (including any Derived Output, statistic, chart, dashboard, metric, signal, or visualization), constitutes financial, investment, trading, tax, accounting, or legal advice, or a recommendation, solicitation, or offer to buy or sell any security, derivative, currency, digital asset, or other financial instrument.
 
 4.2 Licensor is not a registered broker-dealer, investment adviser, financial planner, tax adviser, or fiduciary, and is not registered with any securities or financial regulator in any jurisdiction. No advisory, fiduciary, or professional-client relationship is created by your use of the Software or the Online Services.
 
-4.3 **All trading decisions are yours alone.** Trading securities, futures, options, foreign exchange, contracts for difference, digital assets, and other financial instruments involves substantial risk of loss and is not suitable for every person. Past performance — including past performance reflected in your own Trading Data and the Software's Derived Output — is not indicative of future results.
+4.3 **All trading decisions are yours alone.** Trading securities, futures, options, foreign exchange, contracts for difference, digital assets, and other financial instruments involves substantial risk of loss and is not suitable for every person. Past performance (including past performance reflected in your own Trading Data and the Software's Derived Output), is not indicative of future results.
 
 4.4 If any Online Service permits users to share trades, statistics, or commentary, such shared content is the opinion and record of the individual user only. It is not advice, is not endorsed or verified by Licensor, and must not be relied upon in making any trading decision.
 
